@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#7972E6"
+    >
+
+    <ImageView
+        android:src="@drawable/ic_ptj_foreground"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="54dp"
+        android:id="@+id/ptj"/>
+
+    <TextView
+        android:id="@+id/prisoyedinyaytes"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:text="ПРИСОЕДИНЯЙТЕСЬ СЕГОДНЯ, ЧТОБЫ НАЧАТЬ СВОЮ РАБОТУ!
+"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:layout_marginStart="47dp"
+        android:layout_below="@id/ptj"
+        />
+
+    <View
+        android:layout_width="338dp"
+        android:layout_height="329dp"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginStart="38dp"
+        android:layout_below="@id/prisoyedinyaytes"
+        />
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="218dp"
+        android:layout_height="37dp"
+        android:text="WELCOME!"
+        android:textAlignment="center"
+        android:textColor="#414449"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="98dp"/>
+
+    <Button
+        android:layout_width="252dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/welcome"
+        android:background="@drawable/button_borders"
+        android:text="ВХОД!"
+        app:backgroundTint="#7972E6"
+        android:layout_marginStart="81dp"
+        android:id="@+id/vhod"
+        />
+    <Button
+        android:layout_width="252dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/vhod"
+        android:background="@drawable/button_borders"
+        android:text="РЕГИСТАЦИЯ"
+        android:textColor="#7972e6"
+        app:backgroundTint="#ffffff"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="10dp"
+        />
+</RelativeLayout>
