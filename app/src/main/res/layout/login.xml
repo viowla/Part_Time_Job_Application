@@ -13,7 +13,7 @@
         android:id="@+id/ptj"/>
     <View
         android:layout_width="338dp"
-        android:layout_height="329dp"
+        android:layout_height="400dp"
         android:background="@drawable/rounded_corners"
         android:layout_marginStart="38dp"
         android:layout_below="@id/ptj"
@@ -55,7 +55,14 @@
         android:text="ВХОД!"
         android:layout_marginStart="81dp"
         android:id="@+id/vhod"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="99dp"
         />
-
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="19dp"
+        android:layout_below="@id/password"
+        android:layout_marginTop="57dp"
+        android:textColor="#414449"
+        android:layout_marginStart="96dp"
+        android:text="Забыли пароль?"/>
 </RelativeLayout>
