@@ -5,8 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#7972E6"
+    android:background="#eeeeee"
     >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/button_borders"/>
 
     <ImageView
         android:src="@drawable/ic_ptj_foreground"
@@ -64,6 +69,6 @@
         android:textColor="#7972e6"
         app:backgroundTint="#ffffff"
         android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="38dp"
         />
 </RelativeLayout>
