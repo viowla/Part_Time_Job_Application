@@ -10,8 +10,13 @@
         android:layout_height="300dp"
         android:background="@drawable/button_borders"/>
     
-    <ImageView
-        android:src="@drawable/ic_ptj_foreground"
+    <TextView
+        android:text="ptj"
+        android:textFontWeight="500"
+        android:textAllCaps="true"
+        android:textSize="36dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
         android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
@@ -19,7 +24,7 @@
         android:id="@+id/ptj"/>
     <View
         android:layout_width="338dp"
-        android:layout_height="400dp"
+        android:layout_height="430dp"
         android:background="@drawable/rounded_corners"
         android:layout_marginStart="38dp"
         android:layout_below="@id/ptj"
