@@ -70,5 +70,6 @@
         app:backgroundTint="#ffffff"
         android:layout_marginStart="81dp"
         android:layout_marginTop="38dp"
+        android:id="@+id/registration"
         />
 </RelativeLayout>
