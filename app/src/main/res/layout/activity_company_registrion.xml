@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="#eeeeee"
-    tools:context=".RegistrationActivity">
+    tools:context=".CompanyRegistrationActivity"
+    android:background="#eeeeee">
 
     <View
         android:layout_width="match_parent"
@@ -33,13 +32,35 @@
         android:layout_marginStart="38dp"/>
     <EditText
         android:layout_width="290dp"
-
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="11dp"
         android:layout_below="@id/ptj"
+        android:id="@+id/company_name"
+        android:layout_marginStart="64dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_office_24"
+        android:layout_below="@id/ptj"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"/>
+
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="62dp"
+        android:background="#dfe0e4"
+        android:layout_marginTop="11dp"
+        android:layout_below="@id/company_name"
         android:id="@+id/fio"
         android:layout_marginStart="64dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_account_box_24"
+        android:layout_below="@id/company_name"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"/>
     <EditText
         android:layout_width="290dp"
         android:layout_height="62dp"
@@ -48,6 +69,13 @@
         android:layout_below="@id/fio"
         android:id="@+id/email"
         android:layout_marginStart="64dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_email_24"
+        android:layout_below="@id/fio"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"/>
     <EditText
         android:layout_width="290dp"
         android:layout_height="62dp"
@@ -56,9 +84,15 @@
         android:layout_below="@id/email"
         android:id="@+id/phone"
         android:layout_marginStart="64dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_local_phone_24"
+        android:layout_below="@id/email"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"/>
 
     <EditText
-        android:inputType="textPassword"
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:background="#dfe0e4"
@@ -66,8 +100,14 @@
         android:layout_below="@id/phone"
         android:id="@+id/password"
         android:layout_marginStart="64dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_lock_24"
+        android:layout_below="@id/phone"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"/>
     <EditText
-        android:inputType="textPassword"
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:background="#dfe0e4"
@@ -75,6 +115,13 @@
         android:layout_below="@id/password"
         android:id="@+id/password2"
         android:layout_marginStart="64dp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_lock_24"
+        android:layout_below="@id/password"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"/>
 
     <Button
         android:layout_width="252dp"
@@ -83,21 +130,8 @@
         android:background="@drawable/button_borders"
         android:text="РЕГИСТРАЦИЯ!"
         android:layout_marginStart="81dp"
-        android:id="@+id/regis_user"
+        android:id="@+id/regis_company"
         android:layout_marginTop="20dp"
         />
-    <Button
-        android:layout_width="252dp"
-        android:layout_height="56dp"
-        android:layout_below="@id/regis_user"
-        android:background="@drawable/button_borders"
-        android:text="РЕГИСТРАЦИЯ компании!"
-        android:layout_marginStart="81dp"
-        android:id="@+id/regis_company"
-        android:layout_marginTop="9dp"
-        android:textColor="#7972e6"
-        app:backgroundTint="#ffffff"
-        />
-
 
 </RelativeLayout>
