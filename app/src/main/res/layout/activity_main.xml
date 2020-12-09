@@ -58,12 +58,12 @@
         android:text="ВХОД!"
         app:backgroundTint="#7972E6"
         android:layout_marginStart="81dp"
-        android:id="@+id/vhod"
+        android:id="@+id/enter"
         />
     <Button
         android:layout_width="252dp"
         android:layout_height="56dp"
-        android:layout_below="@id/vhod"
+        android:layout_below="@id/enter"
         android:background="@drawable/button_borders"
         android:text="РЕГИСТАЦИЯ"
         android:textColor="#7972e6"
