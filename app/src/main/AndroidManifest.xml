@@ -10,9 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PartTimeJobApplication">
         <activity android:name=".FirstPageActivity"></activity>
-        <activity android:name=".CompanyRegistrationActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".CompanyRegistrationActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".RegistrationActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
