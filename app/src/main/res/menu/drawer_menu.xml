@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/profile"
+            android:icon="@drawable/ic_baseline_profile_24"
+            android:title="Профиль"/>
+        <item android:id="@+id/vacancies"
+            android:icon="@drawable/ic_baseline_vacancies_24"
+            android:title="Вакансии"/>
+        <item android:id="@+id/companies"
+            android:icon="@drawable/ic_baseline_office_24"
+            android:title="Компании"/>
+        <item android:id="@+id/notification"
+            android:icon="@drawable/ic_baseline_notifications_24"
+            android:title="Уведомления"/>
+        <item android:id="@+id/info"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="Интересно знать"/>
+        <item android:id="@+id/settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Настройки"/>
+        <item android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="Выход"/>
+    </group>
+
+
+</menu>
