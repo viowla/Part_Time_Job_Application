@@ -1,15 +1,12 @@
 package com.example.parttimejobapplication.company;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.parttimejobapplication.JsonPlaceHolderApi;
 import com.example.parttimejobapplication.R;
-import com.example.parttimejobapplication.vacancy.Vacancy;
 
 import java.util.List;
 
