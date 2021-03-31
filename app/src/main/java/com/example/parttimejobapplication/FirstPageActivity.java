@@ -13,25 +13,69 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.parttimejobapplication.vacancy.JsonPlaceHolderApi;
+import com.example.parttimejobapplication.vacancy.Vacancy;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class FirstPageActivity extends AppCompatActivity {
 
-    ListView listView;
+   /* ListView listView;
     String[] vacancy_name={"nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs"};
     String[] vacancy_pay={"nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs"};
-    String[] vacancy_comp={"nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs"};
+    String[] vacancy_comp={"nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs","nbhfbhs"};*/
+
+    TextView textViewResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
-        listView = findViewById(R.id.listView);
-        MyAdapter myAdapter=new MyAdapter(this,vacancy_name,vacancy_pay,vacancy_comp);
-        listView.setAdapter(myAdapter);
+        textViewResults = findViewById(R.id.text_view_result);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://localhost")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+        Call<List<Vacancy>> call = jsonPlaceHolderApi.getVacancies();
+
+        call.enqueue(new Callback<List<Vacancy>>() {
+            @Override
+            public void onResponse(Call<List<Vacancy>> call, Response<List<Vacancy>> response) {
+                if(!response.isSuccessful()){
+                    textViewResults.setText("Code: "+response.code());
+                    return;
+                }
+
+                List<Vacancy> vacancies = response.body();
+
+                for (Vacancy vacancy:vacancies){
+                    String content ="";
+                    content+="Company: "+vacancy.getCompanyName()+"\n";
+                    content+="Vacancy: "+vacancy.getName()+"\n";
+                    content+="Description: "+vacancy.getText()+"\n";
+
+                    textViewResults.append(content);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Vacancy>> call, Throwable t) {
+                textViewResults.setText(t.getMessage());
+            }
+        });
     }
 
 
-    class MyAdapter extends ArrayAdapter<String> {
+    /*class MyAdapter extends ArrayAdapter<String> {
         Context context;
         String[] vac_name;
         String[] vac_pay;
@@ -62,5 +106,5 @@ public class FirstPageActivity extends AppCompatActivity {
 
             return row;
         }
-    }
+    }*/
 }

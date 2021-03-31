@@ -3,14 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#eeeeee"
+    android:background="#7972e6"
     tools:context=".LoginActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/button_borders"/>
-    
+
     <TextView
         android:text="ptj"
         android:textFontWeight="500"
@@ -21,11 +17,11 @@
         android:layout_width="205dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/ptj"/>
     <View
         android:layout_width="338dp"
-        android:layout_height="430dp"
+        android:layout_height="330dp"
         android:background="@drawable/rounded_corners"
         android:layout_marginStart="38dp"
         android:layout_below="@id/ptj"
@@ -34,7 +30,8 @@
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:background="#dfe0e4"
-        android:layout_marginTop="200dp"
+        android:layout_below="@id/ptj"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="64dp"
         android:id="@+id/email"/>
     <EditText
@@ -45,20 +42,7 @@
         android:layout_below="@id/email"
         android:id="@+id/password"
         android:layout_marginStart="64dp"/>
-    <CheckBox
-        android:layout_width="17dp"
-        android:layout_height="17dp"
-        android:layout_below="@id/password"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="25dp"/>
-    <TextView
-        android:layout_width="125dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="24dp"
-        android:text="Запомнить меня"
-        android:textColor="#414449"
-        android:layout_below="@id/password"/>
+
     <Button
         android:layout_width="252dp"
         android:layout_height="56dp"
@@ -67,14 +51,17 @@
         android:text="ВХОД!"
         android:layout_marginStart="81dp"
         android:id="@+id/vhod"
-        android:layout_marginTop="99dp"
+        android:layout_marginTop="29dp"
         />
+
     <TextView
-        android:layout_width="125dp"
+        android:layout_width="252dp"
         android:layout_height="19dp"
-        android:layout_below="@id/password"
-        android:layout_marginTop="57dp"
-        android:textColor="#414449"
+        android:layout_below="@id/vhod"
+        android:layout_marginTop="17dp"
+        android:textColor="#651421"
         android:layout_marginStart="96dp"
-        android:text="Забыли пароль?"/>
+        android:id="@+id/tvRegister"
+        android:textAlignment="center"
+        android:text="Нет аккаунта? Зарегистрируйтесь"/>
 </RelativeLayout>
