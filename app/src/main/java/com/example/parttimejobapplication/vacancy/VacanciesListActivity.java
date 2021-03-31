@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.parttimejobapplication.JsonPlaceHolderApi;
 import com.example.parttimejobapplication.R;
 
 import java.util.List;
