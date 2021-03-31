@@ -1,5 +1,6 @@
 package com.example.parttimejobapplication;
 
+import com.example.parttimejobapplication.company.Company;
 import com.example.parttimejobapplication.profile.Profile;
 import com.example.parttimejobapplication.vacancy.Vacancy;
 
@@ -13,4 +14,6 @@ public interface JsonPlaceHolderApi {
     Call<List<Vacancy>> getVacancies();
     @GET("profile")
     Call<List<Profile>> getProfiles();
+    @GET("company")
+    Call<List<Company>> getCompanies();
 }

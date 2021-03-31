@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Vacancy {
     private int id;
+    @SerializedName("title")
     private String name;
-    private String companyName;
-    @SerializedName("body")
+    @SerializedName("description")
     private String text;
 
     public int getId() {
@@ -17,9 +17,6 @@ public class Vacancy {
         return name;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
 
     public String getText() {
         return text;
