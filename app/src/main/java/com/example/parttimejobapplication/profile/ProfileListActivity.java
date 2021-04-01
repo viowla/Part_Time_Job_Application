@@ -46,8 +46,8 @@ public class ProfileListActivity extends AppCompatActivity {
 
                 for (Profile profile:profiles){
                     String content ="";
-                    content+="Company: "+profile.getName()+"\n";
-                    content+="Vacancy: "+profile.getEmail()+"\n";
+                    content+="Company: "+profile.getUserId()+"\n";
+                    content+="Vacancy: "+profile.getCitizenship()+"\n";
 
                     profileViewResults.append(content);
                 }

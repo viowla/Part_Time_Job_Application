@@ -1,8 +1,13 @@
 package com.example.parttimejobapplication.company;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Company {
+    @SerializedName("name")
     private String name;
+    @SerializedName("address")
     private String address;
+    @SerializedName("email")
     private String email;
 
     public String getName() {
