@@ -10,7 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.parttimejobapplication.login.RetrofitClientInstance;
 
 import java.io.UnsupportedEncodingException;
 
@@ -25,14 +28,17 @@ public class LoginActivity extends AppCompatActivity {
     private Button button;
     private EditText emailTxt, passTxt;
     private String email, password;
+    private TextView signupPage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
         button=findViewById(R.id.loginBtn);
-        emailTxt=findViewById(R.id.email);
-        passTxt=findViewById(R.id.password);
+        emailTxt=findViewById(R.id.emailLogin);
+        passTxt=findViewById(R.id.passwordLogin);
+
+        signupPage = findViewById(R.id.tvRegister);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +50,12 @@ public class LoginActivity extends AppCompatActivity {
                 checkLoginDetails(authToken);
             }
         });
+
+
+    }
+
+    public void onClickMove(View view){
+        startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
     }
 
     private void checkLoginDetails(String authToken) {

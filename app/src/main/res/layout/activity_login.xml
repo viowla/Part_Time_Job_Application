@@ -33,20 +33,22 @@
         android:layout_below="@id/ptj"
         android:layout_marginTop="20dp"
         android:layout_marginStart="64dp"
-        android:id="@+id/email"/>
+        android:hint="Email"
+        android:id="@+id/emailLogin"/>
     <EditText
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="27dp"
-        android:layout_below="@id/email"
-        android:id="@+id/password"
+        android:layout_below="@id/emailLogin"
+        android:id="@+id/passwordLogin"
+        android:hint="Password"
         android:layout_marginStart="64dp"/>
 
     <Button
         android:layout_width="252dp"
         android:layout_height="56dp"
-        android:layout_below="@id/password"
+        android:layout_below="@id/passwordLogin"
         android:background="@drawable/button_borders"
         android:text="ВХОД!"
         android:layout_marginStart="81dp"
@@ -62,6 +64,8 @@
         android:textColor="#651421"
         android:layout_marginStart="96dp"
         android:id="@+id/tvRegister"
+        android:onClick="onClickMove"
+        android:clickable="true"
         android:textAlignment="center"
         android:text="Нет аккаунта? Зарегистрируйтесь"/>
 </RelativeLayout>
