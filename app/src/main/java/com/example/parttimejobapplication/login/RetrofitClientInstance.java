@@ -1,4 +1,4 @@
-package com.example.parttimejobapplication;
+package com.example.parttimejobapplication.login;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

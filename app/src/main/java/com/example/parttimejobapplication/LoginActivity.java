@@ -40,15 +40,12 @@ public class LoginActivity extends AppCompatActivity {
 
         signupPage = findViewById(R.id.tvRegister);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                email=emailTxt.getText().toString();
-                password=passTxt.getText().toString();
+        button.setOnClickListener(v -> {
+            email=emailTxt.getText().toString();
+            password=passTxt.getText().toString();
 
-                String authToken= createAuthToken(email, password);
-                checkLoginDetails(authToken);
-            }
+            String authToken= createAuthToken(email, password);
+            checkLoginDetails(authToken);
         });
 
 

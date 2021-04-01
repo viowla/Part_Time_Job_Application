@@ -50,7 +50,6 @@ public class FirstPageActivity extends AppCompatActivity {
 
                 for (Vacancy vacancy:vacancies){
                     String content ="";
-                    content+="Company: "+vacancy.getCompanyName()+"\n";
                     content+="Vacancy: "+vacancy.getName()+"\n";
                     content+="Description: "+vacancy.getText()+"\n";
 

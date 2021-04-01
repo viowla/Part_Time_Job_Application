@@ -2,6 +2,7 @@ package com.example.parttimejobapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -31,28 +32,21 @@ public class RegistrationActivity extends AppCompatActivity {
         etPassword= (EditText) findViewById(R.id.passwordUserRegistration);
         repPassword= (EditText) findViewById(R.id.repeatPasswordUserRegistration);
         btnRegister = findViewById(R.id.registrationUserBtn);
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String Name= etName.getText().toString();
-                String Email= etEmail.getText().toString();
-                String Password=etPassword.getText().toString();
-                String Phone=etPassword.getText().toString();
-                String repPassword=etPassword.getText().toString();
+        btnRegister.setOnClickListener(v -> {
+            String Name= etName.getText().toString();
+            String Email= etEmail.getText().toString();
+            String Password=etPassword.getText().toString();
+            String Phone=etPassword.getText().toString();
+            String repPassword=etPassword.getText().toString();
 
-                new RegisterUser().execute(Name, Email, Phone, Password, repPassword);
-            }
+            new RegisterUser().execute(Name, Email, Phone, Password, repPassword);
         });
 
         company_registration = findViewById(R.id.companyRegistrationPageBtn);
-        company_registration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegistrationActivity.this, CompanyRegistrationActivity.class));
-            }
-        });
+        company_registration.setOnClickListener(v -> startActivity(new Intent(RegistrationActivity.this, CompanyRegistrationActivity.class)));
     }
 
+    @SuppressLint("StaticFieldLeak")
     public class RegisterUser extends AsyncTask<String,Void, String> {
         @Override
         protected String doInBackground(String... strings) {
@@ -76,7 +70,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
             //checking server response and inserting data
 
-            Response response= null;
+            Response response;
 
             try {
                 response= okHttpClient.newCall(request).execute();
@@ -111,11 +105,6 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     public void showToast(final String Text){
-        this.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(RegistrationActivity.this, Text, Toast.LENGTH_LONG).show();
-            }
-        });
+        this.runOnUiThread(() -> Toast.makeText(RegistrationActivity.this, Text, Toast.LENGTH_LONG).show());
     }
 }
