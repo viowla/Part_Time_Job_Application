@@ -18,18 +18,8 @@ public class MainActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.loginBtnMain);
         registrationBtn = findViewById(R.id.registrationBtnMain);
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            }
-        });
+        loginBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
 
-        registrationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
-            }
-        });
+        registrationBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, RegistrationActivity.class)));
     }
 }
