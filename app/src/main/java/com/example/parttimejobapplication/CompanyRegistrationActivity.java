@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import okhttp3.OkHttpClient;
@@ -15,7 +16,8 @@ import okhttp3.Response;
 
 public class CompanyRegistrationActivity extends AppCompatActivity {
 
-    Button registration_complete;
+    Button companyRegistration;
+    EditText etCompanyName, etRepresentativeName, etCompanyEmail, etCompanyPhone, etComapnyPassword, repCompanyPassword;
 
     final String url_Register= "add/company/";
 
@@ -24,25 +26,44 @@ public class CompanyRegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_registrion);
-        registration_complete = findViewById(R.id.regis_company);
+        companyRegistration = findViewById(R.id.companyRegistrationBtn);
+        etCompanyName = findViewById(R.id.companyNameRegistration);
+        etRepresentativeName = findViewById(R.id.companyRepresentativeNameRegistration);
+        etCompanyEmail = findViewById(R.id.companyEmailRegistration);
+        etCompanyPhone = findViewById(R.id.companyPhoneRegistration);
+        etComapnyPassword = findViewById(R.id.companyPasswordRegistration);
+        repCompanyPassword = findViewById(R.id.repeatPasswordCompanyRegistration);
 
-        registration_complete.setOnClickListener(new View.OnClickListener() {
+        companyRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CompanyRegistrationActivity.this, FirstPageActivity.class));
+                String companyName= etCompanyName.getText().toString();
+                String companyRepresentativeName= etRepresentativeName.getText().toString();
+                String companyEmail= etCompanyEmail.getText().toString();
+                String companyPassword=etComapnyPassword.getText().toString();
+                String companyPhone=etCompanyPhone.getText().toString();
+                String companyRepPassword=repCompanyPassword.getText().toString();
+
+                new RegisterCompany().execute(companyName,companyRepresentativeName, companyEmail, companyPhone, companyPassword, companyRepPassword);
             }
         });
     }
 
-    public class RegisterUser extends AsyncTask<String,Void, String> {
+    public class RegisterCompany extends AsyncTask<String,Void, String> {
         @Override
         protected String doInBackground(String... strings) {
-            String Name= strings[0];
-            String Email= strings[1];
-            String Password=strings[2];
-            String finalurl=url_Register+"?user_name="+Name+
-                    "&user_id="+Email+
-                    "&user_password="+Password;
+            String companyName= strings[0];
+            String companyRepresentativeName= strings[1];
+            String companyEmail= strings[2];
+            String companyPhone= strings[3];
+            String companyPassword=strings[4];
+            String companyRepPassword=strings[5];
+            String finalurl=url_Register+"?company_name="+companyName+
+                    "&company_representative_name="+companyRepresentativeName+
+                    "&company_email="+companyEmail+
+                    "&company_phone="+companyPhone+
+                    "&company_password="+companyPassword+
+                    "&user_repPassword="+companyRepPassword;
 
             OkHttpClient okHttpClient=new OkHttpClient();
             Request request = new Request.Builder()

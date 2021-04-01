@@ -65,7 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     "&user_email="+Email+
                     "&user_phone="+Phone+
                     "&user_password="+Password+
-                    "&user_reppassword="+repPassword;
+                    "&user_repPassword="+repPassword;
 
             OkHttpClient okHttpClient=new OkHttpClient();
             Request request = new Request.Builder()
