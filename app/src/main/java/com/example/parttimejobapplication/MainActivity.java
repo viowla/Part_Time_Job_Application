@@ -9,23 +9,23 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button vhod, registration;
+    Button loginBtn, registrationBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        vhod = findViewById(R.id.loginBtn);
-        registration = findViewById(R.id.registration);
+        loginBtn = findViewById(R.id.loginBtnMain);
+        registrationBtn = findViewById(R.id.registrationBtnMain);
 
-        vhod.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
 
-        registration.setOnClickListener(new View.OnClickListener() {
+        registrationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
