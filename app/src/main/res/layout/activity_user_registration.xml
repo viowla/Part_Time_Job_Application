@@ -32,28 +32,30 @@
         android:layout_marginStart="38dp"/>
     <EditText
         android:layout_width="290dp"
-
+        android:hint="Fullname"
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="11dp"
         android:layout_below="@id/ptj"
-        android:id="@+id/fio"
+        android:id="@+id/userFullnameRegistration"
         android:layout_marginStart="64dp"/>
     <EditText
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="11dp"
-        android:layout_below="@id/fio"
-        android:id="@+id/email"
+        android:layout_below="@id/userFullnameRegistration"
+        android:id="@+id/userEmailRegistration"
+        android:hint="Email"
         android:layout_marginStart="64dp"/>
     <EditText
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="11dp"
-        android:layout_below="@id/email"
-        android:id="@+id/phone"
+        android:layout_below="@id/userEmailRegistration"
+        android:id="@+id/userPhoneRegistration"
+        android:hint="Phone"
         android:layout_marginStart="64dp"/>
 
     <EditText
@@ -62,8 +64,9 @@
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="11dp"
-        android:layout_below="@id/phone"
-        android:id="@+id/password"
+        android:layout_below="@id/userPhoneRegistration"
+        android:hint="Password"
+        android:id="@+id/passwordUserRegistration"
         android:layout_marginStart="64dp"/>
     <EditText
         android:inputType="textPassword"
@@ -71,28 +74,29 @@
         android:layout_height="62dp"
         android:background="#dfe0e4"
         android:layout_marginTop="11dp"
-        android:layout_below="@id/password"
-        android:id="@+id/password2"
+        android:hint="Repeat password"
+        android:layout_below="@id/passwordUserRegistration"
+        android:id="@+id/repeatPasswordUserRegistration"
         android:layout_marginStart="64dp"/>
 
     <Button
         android:layout_width="252dp"
         android:layout_height="56dp"
-        android:layout_below="@id/password2"
+        android:layout_below="@id/repeatPasswordUserRegistration"
         android:background="@drawable/button_borders"
         android:text="РЕГИСТРАЦИЯ!"
         android:layout_marginStart="81dp"
-        android:id="@+id/regis_user"
+        android:id="@+id/registrationUserBtn"
         android:layout_marginTop="20dp"
         />
     <Button
         android:layout_width="252dp"
         android:layout_height="56dp"
-        android:layout_below="@id/regis_user"
+        android:layout_below="@id/registrationUserBtn"
         android:background="@drawable/button_borders"
         android:text="РЕГИСТРАЦИЯ компании!"
         android:layout_marginStart="81dp"
-        android:id="@+id/regis_company"
+        android:id="@+id/companyRegistrationPageBtn"
         android:layout_marginTop="9dp"
         android:textColor="#7972e6"
         app:backgroundTint="#ffffff"

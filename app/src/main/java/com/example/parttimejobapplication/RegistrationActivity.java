@@ -16,32 +16,35 @@ import okhttp3.Response;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    EditText etName, etEmail, etPassword, repPassword;
+    EditText etName, etEmail, etPhone, etPassword, repPassword;
     Button btnRegister, company_registration;
     final String url_Register= "register/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registration);
+        setContentView(R.layout.activity_user_registration);
 
-        etName= (EditText) findViewById(R.id.fio);
-        etEmail= (EditText) findViewById(R.id.email);
-        etPassword= (EditText) findViewById(R.id.password);
-        repPassword= (EditText) findViewById(R.id.password2);
-        btnRegister = findViewById(R.id.regis_user);
+        etName= (EditText) findViewById(R.id.userFullnameRegistration);
+        etEmail= (EditText) findViewById(R.id.userEmailRegistration);
+        etPhone= (EditText) findViewById(R.id.userPhoneRegistration);
+        etPassword= (EditText) findViewById(R.id.passwordUserRegistration);
+        repPassword= (EditText) findViewById(R.id.repeatPasswordUserRegistration);
+        btnRegister = findViewById(R.id.registrationUserBtn);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Name= etName.getText().toString();
                 String Email= etEmail.getText().toString();
                 String Password=etPassword.getText().toString();
+                String Phone=etPassword.getText().toString();
+                String repPassword=etPassword.getText().toString();
 
-                new RegisterUser().execute(Name, Email, Password);
+                new RegisterUser().execute(Name, Email, Phone, Password, repPassword);
             }
         });
 
-        company_registration = findViewById(R.id.regis_company);
+        company_registration = findViewById(R.id.companyRegistrationPageBtn);
         company_registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,10 +58,14 @@ public class RegistrationActivity extends AppCompatActivity {
         protected String doInBackground(String... strings) {
             String Name= strings[0];
             String Email= strings[1];
-            String Password=strings[2];
+            String Phone= strings[2];
+            String Password=strings[3];
+            String repPassword=strings[4];
             String finalurl=url_Register+"?user_name="+Name+
-                    "&user_id="+Email+
-                    "&user_password="+Password;
+                    "&user_email="+Email+
+                    "&user_phone="+Phone+
+                    "&user_password="+Password+
+                    "&user_reppassword="+repPassword;
 
             OkHttpClient okHttpClient=new OkHttpClient();
             Request request = new Request.Builder()
