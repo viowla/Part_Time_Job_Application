@@ -50,14 +50,14 @@
         android:background="@drawable/button_borders"
         android:text="ВХОД!"
         android:layout_marginStart="81dp"
-        android:id="@+id/vhod"
+        android:id="@+id/loginBtn"
         android:layout_marginTop="29dp"
         />
 
     <TextView
         android:layout_width="252dp"
         android:layout_height="19dp"
-        android:layout_below="@id/vhod"
+        android:layout_below="@id/loginBtn"
         android:layout_marginTop="17dp"
         android:textColor="#651421"
         android:layout_marginStart="96dp"

@@ -7,7 +7,7 @@ import com.example.parttimejobapplication.vacancy.Vacancy;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.GET;
+import retrofit2.http.*;
 
 public interface JsonPlaceHolderApi {
     @GET("vacancy")
@@ -16,4 +16,7 @@ public interface JsonPlaceHolderApi {
     Call<List<Profile>> getProfiles();
     @GET("company")
     Call<List<Company>> getCompanies();
+
+    @POST("register")
+    Call<String> checkLogin(@Header("Authorization") String authToken);
 }
